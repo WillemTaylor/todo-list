@@ -120,4 +120,33 @@ describe('todos reducer', () => {
       },
     ]);
   });
+
+  it('should handle REMOVE_TODO', () => {
+    expect(
+      todos(
+        [
+          {
+            id: 1,
+            text: 'Run the tests',
+            completed: false,
+          },
+          {
+            id: 2,
+            text: 'Use Redux',
+            completed: false,
+          },
+        ],
+        {
+          type: 'REMOVE_TODO',
+          id: 1,
+        }
+      )
+    ).toEqual([
+      {
+        id: 2,
+        text: 'Use Redux',
+        completed: false,
+      },
+    ]);
+  });
 });

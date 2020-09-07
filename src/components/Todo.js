@@ -5,7 +5,9 @@ import { removeTodo } from '../actions';
 
 const Todo = ({ onClick, completed, text, id, dispatch }) => {
   const handleRemove = () => {
-    dispatch(removeTodo(id));
+    if (id) {
+      dispatch(removeTodo(id));
+    }
   };
 
   return (
