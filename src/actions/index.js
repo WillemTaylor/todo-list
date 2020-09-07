@@ -21,7 +21,7 @@ export const VisibilityFilters = {
   SHOW_ACTIVE: 'SHOW_ACTIVE',
 };
 
-export const removeTodo = (text) => ({
+export const removeTodo = (id) => ({
   type: 'REMOVE_TODO',
-  text,
+  id,
 });

@@ -5,7 +5,7 @@ import Todo from './Todo';
 const TodoList = ({ todos, toggleTodo }) => (
   <ul style={{ padding: todos.length > 0 ? '10px 20px' : 'none' }}>
     {todos.map((todo) => (
-      <Todo key={todo.id} {...todo} onClick={() => toggleTodo(todo.id)} />
+      <Todo key={todo.id} id={todo.id} {...todo} onClick={() => toggleTodo(todo.id)} />
     ))}
   </ul>
 );

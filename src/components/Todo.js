@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { removeTodo } from '../actions';
 
-const Todo = ({ onClick, completed, text, dispatch }) => {
+const Todo = ({ onClick, completed, text, id, dispatch }) => {
   const handleRemove = () => {
-    dispatch(removeTodo(text));
+    dispatch(removeTodo(id));
   };
 
   return (
